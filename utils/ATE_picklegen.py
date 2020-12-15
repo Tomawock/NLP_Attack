@@ -1,5 +1,8 @@
 import numpy as np
 import pickle
+from tqdm import tqdm
+import torch
+from textattack.shared import utils
 
 def nearest_neighbours(emb_matrix, index, topn):
   embedding = torch.tensor(emb_matrix).to(utils.device)
@@ -14,7 +17,7 @@ word2index = {}
 index2word = {}
 nn_matrix = np.zeros((2000000, max_neigh), dtype=np.uint32)
 with open('cc.it.300.vec', mode='r') as input_file:
-  for i, line in enumerate(input_file):
+  for i, line in tqdm(enumerate(input_file)):
     if i > 0:
       word = line.split()[0]
       vec = line.split()[1:]
@@ -22,6 +25,7 @@ with open('cc.it.300.vec', mode='r') as input_file:
       word2index[word] = i-1
       index2word[i-1] = word
 
+print(f'START dump FILES\n')
 with open('embedding_matrix.pkl', 'wb') as output:
   pickle.dump(embedding_matrix, output, protocol=4)
 with open('word2index.pkl', 'wb') as output:
@@ -29,7 +33,8 @@ with open('word2index.pkl', 'wb') as output:
 with open('index2word.pkl', 'wb') as output:
   pickle.dump(index2word, output, protocol=4)
 
-for i in range(len(nn_matrix)):
+print(f'START NN MATRIX\n')
+for i in tqdm(range(len(nn_matrix))):
   nn_matrix[i][:] = nearest_neighbours(embedding_matrix, i, max_neigh)
 
 with open('nn.pkl', 'wb') as output:
