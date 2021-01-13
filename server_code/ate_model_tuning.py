@@ -16,8 +16,6 @@ test = pd.read_json('ate_absita_gold.ndjson', lines=True)
 
 train = pd.read_json('ate_absita_training.ndjson', lines=True)
 
-with open("index2word.pkl", 'rb') as output:
-    i2w = pickle.load(output)
 with open("word2index.pkl", 'rb') as output:
     w2i = pickle.load(output)
 with open("embedding_matrix.pkl", 'rb') as output:
@@ -67,7 +65,7 @@ def objective(trial):
     activation = trial.suggest_categorical('activation', ['tanh', 'relu', 'gelu'])
     units = trial.suggest_int('units', 16, 128)
     recurrent_dropout = trial.suggest_loguniform('dropout', 0.05, 0.5)
-    learning_rate = trial.suggest_float('learning_rate', 0.0005, 0.05, step=0.0001)
+    learning_rate = trial.suggest_float('learning_rate', 0.0005, 0.01, step=0.0001)
 
     model = keras.Sequential()
     model.add(keras.layers.Input(shape=(max, 300)))
