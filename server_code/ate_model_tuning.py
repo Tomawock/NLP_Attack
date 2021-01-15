@@ -76,9 +76,9 @@ def objective(trial):
     model.compile(loss='categorical_crossentropy',
                   optimizer=keras.optimizers.Adam(learning_rate=learning_rate),
                   metrics=['accuracy'])
-  
+
     batch_size = trial.suggest_int('batch_size', 10, 35)
-    epochs = trial.suggest_int('epochs', 10, 30)
+    epochs = trial.suggest_int('epochs', 13, 25)
     result = model.fit(embedded_trainset,
                        one_hot_train,
                        epochs=epochs,
@@ -87,7 +87,7 @@ def objective(trial):
     return model.evaluate(embedded_testset, one_hot_test)[1]
 
 study = optuna.create_study(direction='maximize')
-study.optimize(objective, n_trials=10000)
+study.optimize(objective, n_trials=2400, n_jobs=-1)
 
 with open('optuna_result.pkl', 'wb') as result:
-    pickle.dump(study.trials_dataframe(), res)
+    pickle.dump(study.trials_dataframe(), result)
