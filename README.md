@@ -10,9 +10,9 @@ University Project About NLP, in particular Attacks to change his behavoiur.
 
 Modello  | Modello base allenato | Sinonimi | Embedding | Studio 0 | Studio 1.1 | Studio 1.2 |  Studio 1.3 |  Studio 1.4 | Studio 2.1 | Studio 2.2 |  Studio 2.3 |  Studio 2.4 | Studio 3.1 | Studio 3.2 |  Studio 3.3 |  Studio 3.4 |
 :------: | :-------------------: | :------: | :-------: | :------: | :--------: | :--------: | :---------: | :---------: | :--------: | :--------: | :---------: | :--------: | :--------: | :--------: | :---------: | :---------: |
-DDI      |  SI (optuna)          | SI       |  SI       | NO       | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          |
+DDI      |  SI (optuna)          | SI       |  SI       | SI       | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          |
 ATE      |  SI (optuna)          | SI       |  SI       | SI       | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          |
-GMB      |  SI weights in h5     | SI       |  SI       | SI       | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          |
+GMB      |  SI weights in h5     | SI       |  SI       | SI NEED FIX       | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          |
 AMAZON   |  SI weights in h5     | NO       |  NO       | NO       | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          |
 
 ### Definizione Studi 
