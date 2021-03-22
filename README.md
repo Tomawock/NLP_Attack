@@ -12,7 +12,7 @@ Modello  | Modello base allenato | Sinonimi | Embedding | Studio 0 | Studio 1.1 
 :------: | :-------------------: | :------: | :-------: | :------: | :--------: | :--------: | :---------: | :---------: | :--------: | :--------: | :---------: | :--------: | :--------: | :--------: | :---------: | :---------: |
 DDI      |  SI (optuna)          | SI       |  SI       | SI       | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          |
 ATE      |  SI (optuna)          | SI       |  SI       | SI       | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          |
-GMB      |  SI weights in h5     | SI       |  SI       | SI NEED FIX       | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          |
+GMB      |  SI weights in h5     | SI       |  SI       | SI       | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          |
 AMAZON   |  SI weights in h5     | SI       |  SI       | NO       | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          | NO         | NO         | NO          | NO          |
 
 ### Definizione Studi 
