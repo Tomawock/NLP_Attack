@@ -27,12 +27,15 @@ Embedding  |  0.9312  |  0.9327  |  0.9333  |  0.9331  |
 
 ## AMAZON
 
-Testset    | Studio 0 | Studio 1 | Studio 2 |
-:---------:|:--------:|:--------:|:--------:|
-Testset aug|  0.9212  |  0.8639  |  0.9466  |
-Testset org|  0.9212  |  0.9227  |  0.9451  |
-Sinonimi   |  0.8062  |  0.9007  |  0.8139  |
-Embedding  |  0.9071  |  0.9147  |  0.9476  |
+Studio 1_005 ha un dataset con probabilità di swap 0.05, studio 1 dello 0.5. Stesso per i sinonimi.
+
+Testset    | Studio 0 | Studio 1 | Studio 1_005 | Studio 2 |
+:---------:|:--------:|:--------:|:------------:|:--------:|
+Testset aug|  0.9212  |  0.8639  |    0.9116    |  0.9466  |
+Testset org|  0.9212  |  0.9227  |    0.9451    |  0.9451  |
+Sinonimi   |  0.8062  |  0.9007  |    0.8238    |  0.8139  |
+Sinonimi005|  0.9038  |  0.9123  |    0.9435    |  0.9312  |
+Embedding  |  0.9071  |  0.9147  |    0.9362    |  0.9476  |
 
 
 ## ATE_ABSITA
